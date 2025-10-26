@@ -1,0 +1,141 @@
+.people-input {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.people-input h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.subtitle {
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.person-row {
+  display: flex;
+  align-items: center;
+}
+
+.person-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.person-name {
+  flex: 1;
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.remove-button:hover {
+  background: #ddd6fe;
+  color: #4f46e5;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.name-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.add-button {
+  padding: 0.75rem 1.5rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.add-button:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.add-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+.hint {
+  color: #f59e0b;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #059669;
+}
+
+.submit-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  color: #9ca3af;
+}

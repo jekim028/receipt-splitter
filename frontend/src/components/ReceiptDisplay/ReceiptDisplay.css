@@ -1,0 +1,162 @@
+.receipt-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.receipt-paper {
+  background: white;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Courier New', monospace;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.receipt-empty {
+  text-align: center;
+  color: #999;
+  padding: 3rem;
+  font-family: system-ui, sans-serif;
+}
+
+/* Header */
+.receipt-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.establishment {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Divider */
+.receipt-divider {
+  text-align: center;
+  color: #999;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+/* Items */
+.receipt-items {
+  margin: 1rem 0;
+}
+
+.receipt-item {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.receipt-item.highlighted {
+  animation: pulse 1.5s ease-in-out infinite;
+  border: 2px solid #4f46e5;
+}
+
+.receipt-item.unassigned {
+  border-left: 3px solid #f59e0b;
+  background: #fffbeb !important;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(79, 70, 229, 0);
+  }
+}
+
+.item-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.item-line {
+  min-width: 1.5rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.item-desc {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.item-price {
+  font-weight: bold;
+  min-width: 4rem;
+  text-align: right;
+}
+
+.item-assignment {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  margin-left: 2rem;
+  font-size: 0.85rem;
+  color: #4f46e5;
+  align-items: center;
+}
+
+.assignment-label {
+  color: #999;
+}
+
+.assignment-people {
+  font-weight: 500;
+}
+
+.assignment-strategy {
+  color: #666;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Footer */
+.receipt-footer {
+  margin-top: 1rem;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.footer-row.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-divider {
+  text-align: center;
+  color: #999;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .receipt-paper {
+    padding: 1.5rem 1rem;
+  }
+
+  .receipt-item {
+    padding: 0.4rem;
+  }
+}

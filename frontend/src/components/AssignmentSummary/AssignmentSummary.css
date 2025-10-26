@@ -1,0 +1,140 @@
+.assignment-summary {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.summary-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111;
+}
+
+.unassigned-badge {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* People Summaries */
+.people-summaries {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.person-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.person-summary:hover {
+  background: #f3f4f6;
+}
+
+.person-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.person-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.person-name {
+  font-weight: 500;
+  color: #111;
+}
+
+.person-amount {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* Summary Total */
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 2px solid #e5e7eb;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.total-amount {
+  color: #111;
+  font-size: 1.25rem;
+}
+
+/* Confirm Button */
+.confirm-button {
+  width: 100%;
+  padding: 1rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.confirm-button:hover:not(:disabled) {
+  background: #059669;
+}
+
+.confirm-button:disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.hint {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .assignment-summary {
+    padding: 1rem;
+  }
+
+  .summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

@@ -75,12 +75,17 @@ class Receipt(BaseModel):
         # Process line items and assign IDs
         line_items = []
         for idx, item in enumerate(tabscanner_result.get("lineItems", []), start=1):
+            # Handle qty=0 from TabScanner (treat as 1.0 for splitting purposes)
+            qty = item.get("qty", 1.0)
+            if qty == 0:
+                qty = 1.0
+
             receipt_item = ReceiptItem(
                 id=f"item_{idx}",
                 line_number=idx,
                 desc_clean=item.get("descClean", "Unknown Item"),
                 desc=item.get("desc"),
-                qty=item.get("qty", 1.0),
+                qty=qty,
                 price=item.get("price", 0.0),
                 line_total=item.get("lineTotal", 0.0),
                 product_code=item.get("productCode")

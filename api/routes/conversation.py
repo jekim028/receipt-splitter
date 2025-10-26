@@ -26,6 +26,9 @@ async def start_conversation(request: StartConversationRequest):
     Accepts a parsed receipt and list of people, creates a new conversation
     with initialized assignment state.
     """
+    print(f"🎬 Starting conversation with {len(request.people)} people")
+    print(f"📋 Receipt has {len(request.receipt.line_items)} items")
+
     # Create conversation with initial state
     context = state_manager.create_conversation(
         receipt=request.receipt,

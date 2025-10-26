@@ -53,4 +53,14 @@ async def get_receipt_result(token: str):
         raise HTTPException(status_code=400, detail="Token is required")
 
     result = await get_receipt_result_with_tabscanner(token)
+
+    # If processing is complete, convert TabScanner result to Receipt object
+    if result.get("status") == "done" and result.get("result"):
+        from api.models.receipt import Receipt
+        receipt = Receipt.from_tabscanner(result["result"])
+        return {
+            "status": "done",
+            "result": receipt.model_dump()
+        }
+
     return result
