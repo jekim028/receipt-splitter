@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from dotenv import load_dotenv
 from api.routes.receipt import router as receipt_router
+from api.routes.conversation import router as conversation_router
 
 load_dotenv()
 
@@ -8,6 +9,7 @@ app = FastAPI(title="Receipt Splitter API")
 
 # Include routers
 app.include_router(receipt_router)
+app.include_router(conversation_router)
 
 
 if __name__ == "__main__":
